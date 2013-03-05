@@ -12,7 +12,12 @@
     <meta id="viewport_meta" name="viewport" content="" />
     <script type="text/javascript">
         var viewport_meta = document.getElementById('viewport_meta');
-        var w = (screen.orientation.indexOf("portrait") == 0)?screen.availWidth:screen.availHeight;
+		if (screen.orientation != null) {
+			var w = (screen.orientation.indexOf("portrait") == 0)?screen.availWidth:screen.availHeight;
+		} else {
+			var w = screen.availWidth;
+		}
+
         viewport_meta.setAttribute('content','width='+w+', user-scalable=no');
     </script>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -22,7 +27,7 @@
     <link rel="stylesheet" type="text/css" href="css/help.css"></link>
     <script src="js/jquery-1.7.2.min.js"></script>
     <script src="js/help.js"></script>
-    <script src="js/license.js"></script>
+    <!--<script src="js/license.js"></script>-->
     <script src="js/main.js"></script>
 </head>
 <body>
@@ -84,10 +89,10 @@
         <div id="lvl1_card2" class="card lvl1_card"><div class="front lvl1_card_type2"></div><div class="back lvl1_card_back"></div></div>
         <div id="lvl1_card3" class="card lvl1_card"><div class="front lvl1_card_type3"></div><div class="back lvl1_card_back"></div></div>
         <div id="lvl1_card4" class="card lvl1_card"><div class="front lvl1_card_type4"></div><div class="back lvl1_card_back"></div></div>
-        <div id="lvl1_card5" class="card lvl1_card"><div class="front lvl1_card_type1"></div><div class="back lvl1_card_back"></div></div>
-        <div id="lvl1_card6" class="card lvl1_card"><div class="front lvl1_card_type2"></div><div class="back lvl1_card_back"></div></div>
-        <div id="lvl1_card7" class="card lvl1_card"><div class="front lvl1_card_type3"></div><div class="back lvl1_card_back"></div></div>
-        <div id="lvl1_card8" class="card lvl1_card"><div class="front lvl1_card_type4"></div><div class="back lvl1_card_back"></div></div>
+        <div id="lvl1_card5" class="card lvl1_card"><div class="front lvl2_card_type1"></div><div class="back lvl1_card_back"></div></div>
+        <div id="lvl1_card6" class="card lvl1_card"><div class="front lvl2_card_type2"></div><div class="back lvl1_card_back"></div></div>
+        <div id="lvl1_card7" class="card lvl1_card"><div class="front lvl2_card_type3"></div><div class="back lvl1_card_back"></div></div>
+        <div id="lvl1_card8" class="card lvl1_card"><div class="front lvl2_card_type4"></div><div class="back lvl1_card_back"></div></div>
         <div id="lvl1_help" class="helplaunch"> ? </div>
     </div>
     <div id="lvl2_page" class="game_page" style="display: none">

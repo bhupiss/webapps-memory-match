@@ -123,13 +123,15 @@ Game = {};
 
     function card_flipped(elem) {
         var newcard = $(elem).attr("id");
+		
         var lvl = parseInt(newcard.substring(3, 4));
 
         if(matchcard != undefined)
         {
             var newclass = $("#"+newcard+" .front").attr("class");
             var matchclass = $("#"+matchcard+" .front").attr("class");
-
+			newclass = newclass.replace(/_answer$/, "");
+			matchclass = matchclass.replace(/_answer$/, "");
             if(newclass == matchclass)
             {
                 /* good match */
@@ -262,8 +264,10 @@ Game = {};
         }
 
         /* create a list of cards by index */
-        for(i = 0; i < cardcount; i++)
-            types.push((i%cardtypes)+1);
+        for(i = 0; i < cardcount/2; i++) {
+	        types.push((i%cardtypes)+1);
+			types.push((i%cardtypes)+1+"_answer");
+		}
 
         /* randomly fill out the deck */
         for(i = 0; i < cardcount; i++)
@@ -280,7 +284,7 @@ Game = {};
 
     $(document).ready(function()
     {
-        license_init("license", "main_page");
+        //license_init("license", "main_page");
         help_init("main_help", "help_");
         help_init("lvl1_help", "help_");
         help_init("lvl2_help", "help_");

@@ -511,6 +511,10 @@ body {
 .lvl1_card_type2 { background:url(../img/lvl1-card-acorn.png) no-repeat; }
 .lvl1_card_type3 { background:url(../img/lvl1-card-teepee.png) no-repeat; }
 .lvl1_card_type4 { background:url(../img/lvl1-card-tree.png) no-repeat; }
+.lvl1_card_type1_answer { background:url(../img/lvl2-card-fan.png) no-repeat; }
+.lvl1_card_type2_answer { background:url(../img/lvl2-card-lifevest.png) no-repeat; }
+.lvl1_card_type3_answer { background:url(../img/lvl2-card-lighthouse.png) no-repeat; }
+.lvl1_card_type4_answer { background:url(../img/lvl2-card-melon.png) no-repeat; }
 #lvl1_card1 { top: 143px; left: 188px; }
 #lvl1_card2 { top: 143px; left: 353px; }
 #lvl1_card3 { top: 143px; left: 519px; }
